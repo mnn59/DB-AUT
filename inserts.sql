@@ -11,12 +11,13 @@ INSERT INTO user
 values ('u03', 'Mahdi', 'Poorchiriki', '09035697871', 0);
 
 INSERT INTO user
-values ('u04', 'Reza', ' Nasrollahi', '09213458790', 2);
+values ('u04', 'Reza', 'Nasrollahi', '09213458790', 2);
 
 
 # UPDATE user
 # set Last_name = 'Nasrollahi'
 # where UserID = 'u04';
+# SELECT * FROM user;
 # DELETE from user where UserID='u04';
 
 INSERT INTO user
@@ -27,7 +28,7 @@ values ('u02', 'Reza', 'Irani', '09396074946', 0);
 
 # --------------------------------------------
 
-
+# --------------------|Bank Questions|---------------
 # one sample of Academic-quiz
 INSERT INTO question
 values (1, 'Academic', 'Are you Academic?', 'Yes', 'No', 'Somehow', 'Never', 'A');
@@ -47,38 +48,91 @@ values (5, 'Academic', 'Are you 22 Academic 22 ?', 'Yes', 'No', 'Somehow', 'Neve
 
 #one sample of Sport-quiz
 INSERT INTO question
-values (1, 'Sport', 'Are you Sport?', 'Yes', 'No', 'Somehow', 'Never', 'C');
+values (6, 'Sport', 'Are you Sport?', 'Yes', 'No', 'Somehow', 'Never', 'C');
 
 INSERT INTO question
-values (2, 'Sport', 'Are you Sport2?', 'Yes', 'No', 'Somehow', 'Never', 'C');
+values (7, 'Sport', 'Are you Sport2?', 'Yes', 'No', 'Somehow', 'Never', 'C');
 
 INSERT INTO question
-values (3, 'Sport', 'Are you 22Sport22?', 'Yes', 'No', 'Somehow', 'Never', 'B');
+values (8, 'Sport', 'Are you 22Sport22?', 'Yes', 'No', 'Somehow', 'Never', 'B');
 
 INSERT INTO question
-values (4, 'Sport', 'Are2 2you 2ASport?', 'Yes', 'No', 'Somehow', 'Never', 'C');
+values (9, 'Sport', 'Are2 2you 2ASport?', 'Yes', 'No', 'Somehow', 'Never', 'C');
 
 INSERT INTO question
-values (5, 'Sport', 'Are you 22 Sport 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+values (10, 'Sport', 'Are you 22 Sport 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
 
 
 # one sample of GeographyAndHistory-quiz
 INSERT INTO question
-values (1,'GeographyAndHistory','Are you geo or history?','Yes','No','Somehow','Never','B');
+values (11,'GeographyAndHistory','Are you geo or history?','Yes','No','Somehow','Never','B');
 
 INSERT INTO question
-values (2,'GeographyAndHistory','Are you2 geo2 or history?','Yes','No','Somehow','Never','B');
+values (12,'GeographyAndHistory','Are you2 geo2 or history?','Yes','No','Somehow','Never','B');
 
 INSERT INTO question
-values (3,'GeographyAndHistory','Are yo22u geo or 2history2?','Yes','No','Somehow','Never','A');
+values (13,'GeographyAndHistory','Are yo22u geo or 2history2?','Yes','No','Somehow','Never','A');
 
 INSERT INTO question
-values (4,'GeographyAndHistory','Are you ge2o or hi2st2or2y?','Yes','No','Somehow','Never','A');
+values (14,'GeographyAndHistory','Are you ge2o or hi2st2or2y?','Yes','No','Somehow','Never','A');
 
 INSERT INTO question
-values (5,'GeographyAndHistory','Are you2 geo2 or2 history2?','Yes','No','Somehow','Never','C');
+values (15,'GeographyAndHistory','Are you2 geo2 or2 history2?','Yes','No','Somehow','Never','C');
 
 
+# new question Academic
+INSERT INTO question
+values (16, 'Academic', 'Are you Academic?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (17, 'Academic', 'Are you Academic2?', 'Yes', 'No', 'Somehow', 'Never', 'C');
+
+INSERT INTO question
+values (18, 'Academic', 'Are you 22Academic22?', 'Yes', 'No', 'Somehow', 'Never', 'B');
+
+INSERT INTO question
+values (19, 'Academic', 'Are2 2you 2Academic?', 'Yes', 'No', 'Somehow', 'Never', 'B');
+
+INSERT INTO question
+values (20, 'Academic', 'Are you 22 Academic 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+
+# new sample question Sport
+INSERT INTO question
+values (21, 'Sport', 'Are you new Sport?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (22, 'Sport', 'Are you new Sport2?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (23, 'Sport', 'Are you new 22Sport22?', 'Yes', 'No', 'Somehow', 'Never', 'B');
+
+INSERT INTO question
+values (24, 'Sport', 'Are2 2you new 2ASport?', 'Yes', 'No', 'Somehow', 'Never', 'C');
+
+INSERT INTO question
+values (25, 'Sport', 'Are you 22 Sport 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+
+# new new sample question sport
+INSERT INTO question
+values (26, 'Sport', 'Are you my new 22 Sport 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (27, 'Sport', 'Are you 22 new mySport 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (28, 'Sport', 'Are you new 22 my Sport 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (29, 'Sport', 'Are you 22 newSport my 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+INSERT INTO question
+values (30, 'Sport', 'Are you 22 new Sport my 22 ?', 'Yes', 'No', 'Somehow', 'Never', 'A');
+
+
+
+# SELECT * FROM question;
 # --------------------------------------------
 
 # 3,4,5,7,8,11:
@@ -109,14 +163,16 @@ values (8,'u02','1997-09-03 12:13:20','GeographyAndHistory');
 INSERT INTO quiz
 values (9,'u02','2005-02-01 02:23:40','Sport');
 
+# SELECT * from quiz;
 # --------------------------------------------
 
 # 6,7,8:
+# quiz questions of a quiz with the Academic topic
 INSERT INTO quizquestion
 values (1, 1, 'A');
 
 INSERT INTO quizquestion
-values (1, 2, 'A');
+values (1, 2, 'D');
 
 INSERT INTO quizquestion
 values (1, 3, 'B');
@@ -128,69 +184,94 @@ INSERT INTO quizquestion
 values (1, 5, 'B');
 
 #---
+# quiz questions of another quiz with the Academic topic again
+INSERT INTO quizquestion
+values (2, 16, 'B');
 
 INSERT INTO quizquestion
-values (2, 1, 'B');
+values (2, 17, 'C');
 
 INSERT INTO quizquestion
-values (2, 2, 'C');
+values (2, 18, 'B');
 
 INSERT INTO quizquestion
-values (2, 3, 'B');
+values (2, 19, 'B');
 
 INSERT INTO quizquestion
-values (2, 4, 'B');
-
-INSERT INTO quizquestion
-values (2, 5, 'A');
+values (2, 20, 'A');
+# select * from quizquestion;
 
 #---
 
+# quiz questions of a quiz with the Sport topic
 INSERT INTO quizquestion
-values (5, 1, 'A');
+values (5, 6, 'A');
 
 INSERT INTO quizquestion
-values (5, 2, 'B');
+values (5, 7, 'B');
 
 INSERT INTO quizquestion
-values (5, 3, 'B');
+values (5, 8, 'B');
 
 INSERT INTO quizquestion
-values (5, 4, 'C');
+values (5, 9, 'C');
 
 INSERT INTO quizquestion
-values (5, 5, 'C');
+values (5, 10, 'C');
 
 #---
 
+# quiz questions of a quiz with the GeographyAndHistory topic
 INSERT INTO quizquestion
-values (6, 1, 'A');
+values (6, 11, 'A');
 
 INSERT INTO quizquestion
-values (6, 2, 'C');
+values (6, 12, 'C');
 
 INSERT INTO quizquestion
-values (6, 3, 'C');
+values (6, 13, 'C');
 
 INSERT INTO quizquestion
-values (6, 4, 'A');
+values (6, 14, 'A');
 
 INSERT INTO quizquestion
-values (6, 5, 'B');
+values (6, 15, 'B');
 
 #---
 
+# quiz questions of another quiz with the Sport topic again
 INSERT INTO quizquestion
-values (9,1,'A');
+values (9,21,'A');
 
 INSERT INTO quizquestion
-values (9,2,'B');
+values (9,22,'B');
 
 INSERT INTO quizquestion
-values (9,3,'A');
+values (9,23,'A');
 
 INSERT INTO quizquestion
-values (9,4,'B');
+values (9,24,'B');
 
 INSERT INTO quizquestion
-values (9,5,'C');
+values (9,25,'C');
+
+# ---
+
+# quiz questions of another quiz with the Sport topic again
+INSERT INTO quizquestion
+values (4,26,'D');
+
+INSERT INTO quizquestion
+values (4,27,'A');
+
+INSERT INTO quizquestion
+values (4,28,'D');
+
+INSERT INTO quizquestion
+values (4,29,'B');
+
+INSERT INTO quizquestion
+values (4,30,'B');
+
+
+# select * from quizquestion;

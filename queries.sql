@@ -47,7 +47,7 @@ WHERE UserID = some (
 # ------------------------------
 
 # 5:
-WITH topic_count (Topic, value) as
+WITH topic_count (Topic, count_of_topics) as
          (SELECT Topic, COUNT(QuizID)
           FROM quiz
           GROUP BY Topic)
@@ -69,7 +69,7 @@ FROM topic_count;
 
 WITH answer_count (Answer, value) as
          (SELECT distinct Answer, count(Answer)
-          FROM quiz
+          FROM question
                    natural join quizquestion
           WHERE Topic = 'Sport'
           GROUP BY Answer)
@@ -79,6 +79,13 @@ WHERE value = (
     SELECT MAX(value)
     FROM answer_count
 );
+
+# SELECT * FROM quiz;
+# SELECT * FROM quizquestion;
+# SELECT * FROM quiz natural join quizquestion;
+# SELECT * FROM question natural join quizquestion WHERE Topic = 'Sport';
+
+
 
 
 
@@ -100,23 +107,31 @@ WHERE value = (
 # -----------------------------------------------
 
 # 7:
-WITH right_answer_count (Answer, value) as
-         (SELECT distinct Answer, count(Answer)
-          FROM quiz
-                   natural join quizquestion
-          GROUP BY Answer)
-SELECT Answer
+WITH right_answer_count (Right_Answer, value) as
+         (SELECT distinct RightAnswer, count(RightAnswer)
+          FROM question
+          GROUP BY RightAnswer)
+SELECT Right_Answer
 FROM right_answer_count
 WHERE value = (
     SELECT MAX(value)
     FROM right_answer_count
 );
 
+
+# SELECT * FROM question;
+# SELECT *
+# FROM question
+# WHERE RightAnswer = 'C';
+
+# SELECT *
+# FROM quizquestion;
+
 # ----------------------------------------------
 
 # 8:
-SELECT Topic, COUNT(Answer) as value
-FROM quiz
+SELECT Topic, COUNT(QID) as value
+FROM question
          natural join quizquestion
 GROUP BY Topic;
 
@@ -127,6 +142,9 @@ SELECT UserID, COUNT(QuizID) as value
 FROM quiz
          natural join user
 GROUP BY UserID;
+
+# select *
+# from quiz natural join user;
 
 # ----------------------------------------------
 

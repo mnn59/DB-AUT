@@ -11,6 +11,7 @@ CREATE TABLE User
     primary key (UserID)
 );
 
+drop table user;
 
 # Question relation
 CREATE TABLE Question
@@ -23,7 +24,7 @@ CREATE TABLE Question
     C            varchar(10),
     D            varchar(10),
     RightAnswer  char(1)     not null,
-    primary key (QID,Topic),
+    primary key (QID),
     check ( Topic in ('Academic', 'CulturalAndLiterary', 'GeographyAndHistory', 'Sport') )
 );
 
@@ -39,7 +40,8 @@ CREATE TABLE Quiz
     Date   timestamp not null,
     Topic  varchar(20),
     primary key (QuizID),
-    foreign key (UserID) references User (UserID) on delete cascade
+    foreign key (UserID) references User (UserID) on delete cascade,
+    check ( Topic in ('Academic', 'CulturalAndLiterary', 'GeographyAndHistory', 'Sport') )
 );
 
 drop table quiz;
