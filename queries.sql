@@ -86,9 +86,6 @@ WHERE value = (
 # SELECT * FROM question natural join quizquestion WHERE Topic = 'Sport';
 
 
-
-
-
 # SELECT *
 # FROM quizquestion;
 
@@ -158,6 +155,14 @@ WHERE quizquestion.Answer = question.RightAnswer
 GROUP BY QuizID, UserID
 ORDER BY value desc;
 
+
+# SELECT *
+# from (quiz
+#          natural join quizquestion
+#          natural join question)
+# where quizquestion.Answer = question.RightAnswer
+#   and quiz.Topic = question.Topic;
+
 # SELECT *
 # FROM (quiz
 #          natural join quizquestion
@@ -189,3 +194,34 @@ WHERE quiz.UserID = user.UserID
 # WHERE quizquestion.Answer = question.RightAnswer
 #   and quiz.Topic = question.Topic
 # GROUP BY QuizID, UserID;
+
+SELECT QuizID, UserID, COUNT(QuizID) as num_of_right_answers
+FROM (quiz
+         natural join quizquestion
+         natural join question)
+WHERE quizquestion.Answer = question.RightAnswer
+  and quiz.Topic = question.Topic
+GROUP BY QuizID, UserID
+ORDER BY num_of_right_answers desc;
+
+select *
+from (quiz
+         natural join quizquestion
+         natural join question);
+
+
+select *
+from (quiz
+         natural join quizquestion
+         natural join question )
+where quizquestion.Answer = question.RightAnswer;
+
+
+# -  - - - - - - - - - -  query number 12 is too hard !! - -- - - - -  -
+
+# -------------------------------------------------
+
+# 13:
+select UserID , Trophies
+from user
+;
